@@ -1,0 +1,57 @@
+DAX - Data Analysis Expressions - Work in front end
+
+1. CALCULATED COLUMNS :  add new, formula-based columns
+
+-> DO NOT use calculated columns for aggregation
+
+-> Calculated columns are typically used for filtering & grouping data, rather than creating aggregate numerical values
+
+-> difference between calculated columns and measure
+
+ 
+CALCULATED COLUMNS VS. MEASURES
+
+Calculated Column
+Row by row calculation hoti hai
+Har row ke liye ek value store hoti hai
+Data model me permanently save hoti hai (memory leti hai)
+Table me new column create hota hai
+
+Aggregation (SUM, COUNT, AVG) ke liye use hota hai
+Row level pe nahi, visual ke context pe calculate hota hai
+Memory me store nahi hota (lightweight 🔥)
+Dynamic hota hai (filters ke hisaab se change hota hai)
+
+
+MEASURE -> Measures are DAX formulas used to generate new calculated values
+
+->use measures when a single row can’t give you the answer, or when you need to aggregate values across multiple rows in a table n 
+
+2 types - Implicit measures :  , 
+          Explicit measures
+
+
+
+Types of functions in Dax : MATH & STATS , LOGICAL , TEXT , FILTER , TABLE , DATE & TIME ,  RELATIONSHIP	
+
+
+
+MATH & STATS :-
+
+Sum => Sum of columns , =SUM(column name)
+2. Average => Average of column , =AVERAGE(column name)
+3. Max => Return largest number of column between two scaler , =MAX(ColumnNameOrScalar1 , [Scalar2])
+4. MIN => Return smallest number of column between two scaler , =MIN(ColumnNameOrScalar1 , [Scalar2])
+5. DIVIDE => Performs division and returns the alternate result (or blank) if DIV/0 , =DIVIDE(Numerator, Denominator,[Alternate Result])
+
+COUNTING FUNCTIONS :-
+
+COUNT => Counts the number of non-empty cells in a column(excluding Boolean values), =COUNT(Column Name)
+COUNTA => Counts the number of non-empty cells in a column(including Boolean values), =COUNTA(Column Name)
+DISTINCTCOUNT => Counts the number of distinct values in a column, =DISTINCTCOUNT(ColumnName)
+COUNTROWS => Counts the number of rows in the specified table,or a table defined by an expression, =COUNTROWS([Table])
+
+ 
+
+
+
